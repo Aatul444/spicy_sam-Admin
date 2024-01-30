@@ -1,0 +1,7 @@
+{
+  "name": "spicy_sam-Admin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
