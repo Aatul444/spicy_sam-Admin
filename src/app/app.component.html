@@ -1,29 +1,22 @@
-<ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi&#64;ionicframework.com</ion-note>
-
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
-</ion-app>
+<div class="main_app">
+    <header>Spicy Sam</header>
+    <div style="flex-grow: 1">
+    <router-outlet class="main_app_content"></router-outlet>
+  </div>
+    <div class="container-router">
+      <div class="phone">
+        <input type="radio" name="s" id="s1" routerLink="orders">
+        <input type="radio" name="s" id="s2" checked="checked" routerLink="/">
+        <input type="radio" name="s" id="s3"routerLink="table-bookings">
+        <label for="s1"routerLink="orders"><img src="assets/images/order.svg" alt=""></label>
+        <label for="s2"routerLink="/"><img src="assets/images/menu.svg"></label>
+        <label for="s3"routerLink="table-bookings"><img src="assets/images/waiter.svg" alt=""></label>
+        <div class="circle"></div>
+        <div class="phone_content">
+          <div class="phone_bottom">
+            <span class="indicator"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

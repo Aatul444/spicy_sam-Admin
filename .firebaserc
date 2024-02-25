@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "spicy-sam-2ac84": {
+      "hosting": {
+        "app": [
+          "spicy-sam-2ac84"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "spicy-sam-2ac84"
+  }
+}

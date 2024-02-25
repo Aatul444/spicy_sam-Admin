@@ -1,0 +1,122 @@
+.admin_orders {
+    height: 80vh;
+    overflow-y: scroll;
+
+    .month {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        span {
+            width: 40px;
+            background: aliceblue;
+            text-align: center;
+            font-size: x-large;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+
+        h3 {
+            cursor: pointer;
+        }
+    }
+}
+.orders_list{
+    padding: 0 8px;
+}
+.arrow {
+    font-size: 2rem;
+    transition: transform 1s ease;
+  }
+  
+  .arrow.active {
+    transform: rotate(180deg);
+  }
+  
+.customer_details{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    background: orange;
+    margin-bottom: 12px;
+    color:#3e3e3e;
+}
+.item {
+    padding: 8px 8px;
+    display: flex;
+
+    .food_image {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .food_details {
+        display: flex;
+        flex-grow: 1;
+        margin-left: 20px;
+        flex-direction: column;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            .category {}
+
+            .rating-wrapper {}
+        }
+
+        .card-title {
+            color: rgb(0, 0, 0);
+        }
+
+        .price-wrapper {
+            display: flex;
+            color: rgb(0, 0, 0);
+
+            .price-text {}
+
+            .price {
+                margin-left: 5px;
+            }
+
+        }
+
+        .quantity {
+            display: flex;
+
+            span {
+                width: 40px;
+                height: 40px;
+                background: aliceblue;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                color: black;
+                cursor: pointer;
+            }
+
+            input {
+                width: 67px;
+                height: 40px;
+                text-align: center;
+                padding-left: 18px;
+                color: rgb(0, 0, 0);
+                border-radius: 4px;
+            }
+
+            .removeBtn {
+                position: absolute;
+                right: 8%;
+            }
+        }
+    }
+}

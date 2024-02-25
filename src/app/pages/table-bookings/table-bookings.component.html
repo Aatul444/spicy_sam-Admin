@@ -1,0 +1,43 @@
+<div class="admin_orders">
+    <div class="month">
+      <span (click)="prev()">-</span>
+      <h3>{{ currentMonth }}</h3>
+      <span (click)="next()">+</span>
+    </div>
+    <div class="order_container">
+      <div *ngFor="let order of orders | keyvalue">
+        <h2>{{ order.key }}</h2>
+        <div class="orders_list">
+          <div class="admin_orders_order" *ngFor="let ls of getValue(order) | keyvalue">
+            <div class="customer_details" (click)="getValue(ls).isActive=!getValue(ls).isActive">
+              <div>
+                <p (click)="check(ls)"><strong>Customer</strong><br> Name: {{ getValue(ls).customer.name }}</p>
+                <span>Mail: {{ getValue(ls).customer.email }}</span>
+              </div>
+              <span>Mob: {{ getValue(ls).customer.mobileNumber }}</span>
+              <span class="arrow" [ngClass]="{'active': getValue(ls).isActive}">
+                &#9660;
+              </span>
+            </div>
+            <div class="order_items" *ngFor="let food of getValue(ls).order; let i = index">
+              <div class="item" *ngIf="getValue(ls).isActive">
+                <div class="food_image">
+                  <img src="{{food.image}}" loading="lazy" alt="{{food.name}}">
+                </div>
+                <div class="food_details">
+                  <p class="h1 card-title">{{food.name}}</p>
+                  <div class="price-wrapper">
+                    <p class="price-text">Price:</p>
+                    <data class="price">{{getPrice(food)}}</data>
+                  </div>
+                  <div class="quantity">
+                    <p><strong>Quantity:</strong> {{ food.selection.quantity }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
